@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>
+            <%=title%>
+        </title>
+    </head>
+    <body>
+        <nav>
+            <div class="mini-logo">
+                <p>
+                    <a href='/'>
+                        codeial
+                    </a>
+                </p>
+            </div>
+        
+            <div class="auth-links">
+                <ul>
+                    <% if (locals.user){ %>
+                    <li>
+                        <a href="/user/profile/:id"><%= user.name %></a>
+                    </li>
+                    <li>
+                        <a href="/user/sign-out">Sign Out</a>
+                    </li>
+                    <% }else{ %>
+                    <li>
+                        <a href="/user/sign-in">Sign In</a>
+                    </li>
+                    <li>
+                        <a href="/user/sign-up">Sign Up</a>
+                    </li>
+            
+                    <% } %>
+                </ul>
+            </div>
+        </nav>
+        <h1><%=title%></h1>
+        <a href="/user/sign-in">SIGN IN</a>
+        
+        <section id="feed-post">
+            <h4>Feeds</h4>
+            <div>
+                <ul>
+                    <% for(post of posts){%>
+                        <li>
+                            <%= post.content%>
+                            <br>
+                            <small>
+                                <%=post.user.name%>
+                            </small>
+                            <ul>
+                                <% for(comment of post.comments){%>
+                                    <li>
+                                        <%= comment.content%>
+                                        <br>
+                                        <small>
+                                            <%= comment.user.name %>
+                                        </small>
+                                    </li>
+                               <% } %>
+                            </ul>
+                        </li>
+                   <% } %> 
+                </ul>
+            </div>     
+        </section>
+    </body>
+</html>

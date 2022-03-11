@@ -1,0 +1,73 @@
+/* #home-container {
+  display: flex; }
+  #home-container #feed-posts {
+    width: 70%;
+    padding: 10px; }
+  #home-container #user-friends {
+    width: 30%;
+    padding: 10px;
+    border-left: 1px solid lightgrey;
+    height: 100%; } */
+
+.header-bar{
+      /* background-color: #FFA200; */
+      background: -webkit-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+      /* background-color: #292929; */
+  }
+  /* btn-primary */
+  
+#post-title{
+      background-color: #FBFCFC;
+      /* background-color: #444; */
+      border: transparent;
+      color: #292929 !important
+}
+.btn{
+    color: #ffffff;
+
+  }
+#btn a{
+    color: #ffffff;
+  }
+#post-title:focus{
+      /* color: #ffffff; */
+      background-color: #FBFCFC;
+      /* background-color:rgb(85, 85, 85); */
+      border-color: #80bdff;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25)
+  }
+.container--narrow{
+      max-width: 602px;;
+  }
+.avatar-tiny{
+    width: 24px;
+    height: 24px;
+    border-radius:12px;
+    margin-right: 4px;
+    position: relative;
+    top:-1px;
+}
+.form-control-title{
+    font-size:1rem;
+    font-weight: 500;
+}
+
+.body-content{
+    font-size:1.2rem;
+    line-height:1.75;
+    /* line-height:1; */
+    color: #292929;
+}
+textarea.tall-textarea{
+    height: 160px;
+}
+
+@media (min-width: 768px){
+    /* textarea.tall-textarea{
+        height: 320px;
+    } */
+    textarea.tall-textarea{
+        height: 200px;
+    }
+}
